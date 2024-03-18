@@ -2,47 +2,60 @@ import { type Metadata } from 'next'
 import Image from 'next/image'
 
 import { Border } from '@/components/Border'
-import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
-import { GridList, GridListItem } from '@/components/GridList'
-import { PageIntro } from '@/components/PageIntro'
-import { PageLinks } from '@/components/PageLinks'
-import { SectionIntro } from '@/components/SectionIntro'
-import { StatList, StatListItem } from '@/components/StatList'
-import imageAngelaFisher from '@/images/team/angela-fisher.jpg'
-import imageBenjaminRussel from '@/images/team/benjamin-russel.jpg'
-import imageBlakeReid from '@/images/team/blake-reid.jpg'
-import imageChelseaHagon from '@/images/team/chelsea-hagon.jpg'
-import imageDriesVincent from '@/images/team/dries-vincent.jpg'
-import imageEmmaDorsey from '@/images/team/emma-dorsey.jpg'
-import imageJeffreyWebb from '@/images/team/jeffrey-webb.jpg'
-import imageKathrynMurphy from '@/images/team/kathryn-murphy.jpg'
-import imageLeonardKrasner from '@/images/team/leonard-krasner.jpg'
-import imageLeslieAlexander from '@/images/team/leslie-alexander.jpg'
-import imageMichaelFoster from '@/images/team/michael-foster.jpg'
-import imageWhitneyFrancis from '@/images/team/whitney-francis.jpg'
-import { loadArticles } from '@/lib/mdx'
-
+import figmaImg from '@/images/stack/figma.png'
+import gitImg from '@/images/stack/git.png'
+import hostingerImg from '@/images/stack/hostinger.png'
+import javascriptImg from '@/images/stack/javascript.png'
+import mongodbImg from '@/images/stack/mongodb.png'
+import nextjsImg from '@/images/stack/nextjs.png'
+import nodejsImg from '@/images/stack/nodejs.png'
+import postgresqlImg from '@/images/stack/postgresql.png'
+import reactImg from '@/images/stack/reactjs.png'
+import redisImg from '@/images/stack/redis.png'
+import reduxImg from '@/images/stack/redux.png'
+import riveImg from '@/images/stack/rive.png'
+import sequelizeImg from '@/images/stack/sequelize.png'
+import strapiImg from '@/images/stack/strapi.png'
+import tailwindImg from '@/images/stack/tailwind.png'
+import typescriptImg from '@/images/stack/typescript.png'
+import vercelImg from '@/images/stack/vercel.png'
+import wordpressImg from '@/images/stack/wordpress.png'
 
 const team = [
   {
     title: 'Frontend',
     people: [
       {
-        name: 'Leslie Alexander',
-        role: 'Co-Founder / CEO',
-        image: { src: imageLeslieAlexander },
+        name: 'JavaScript',
+        role: 'Programming Language',
+        image: { src: javascriptImg },
       },
       {
-        name: 'Michael Foster',
-        role: 'Co-Founder / CTO',
-        image: { src: imageMichaelFoster },
+        name: 'React',
+        role: 'JavaScript Library',
+        image: { src: reactImg },
       },
       {
-        name: 'Dries Vincent',
-        role: 'Partner & Business Relations',
-        image: { src: imageDriesVincent },
+        name: 'Nextjs',
+        role: 'JavaScript framework for server-side rendering',
+        image: { src: nextjsImg },
+      },
+      {
+        name: 'Tailwind CSS',
+        role: 'CSS Framework',
+        image: { src: tailwindImg },
+      },
+      {
+        name: 'TypeScript',
+        role: 'JavaScript Superset',
+        image: { src: typescriptImg },
+      },
+      {
+        name: 'Redux',
+        role: 'State management',
+        image: { src: reduxImg },
       },
     ],
   },
@@ -50,49 +63,49 @@ const team = [
     title: 'Backend',
     people: [
       {
-        name: 'Chelsea Hagon',
-        role: 'Senior Developer',
-        image: { src: imageChelseaHagon },
+        name: 'Node js',
+        role: 'JavaScript runtime environment',
+        image: { src: nodejsImg },
       },
       {
-        name: 'Emma Dorsey',
-        role: 'Senior Designer',
-        image: { src: imageEmmaDorsey },
+        name: 'PostgreSQL',
+        role: 'Database management system',
+        image: { src: postgresqlImg },
       },
       {
-        name: 'Leonard Krasner',
-        role: 'VP, User Experience',
-        image: { src: imageLeonardKrasner },
+        name: 'Sequelize',
+        role: 'ORM for Node.js',
+        image: { src: sequelizeImg },
       },
       {
-        name: 'Blake Reid',
-        role: 'Junior Copywriter',
-        image: { src: imageBlakeReid },
+        name: 'Redis',
+        role: 'In-Memory Database',
+        image: { src: redisImg },
       },
       {
-        name: 'Kathryn Murphy',
-        role: 'VP, Human Resources',
-        image: { src: imageKathrynMurphy },
+        name: 'Strapi',
+        role: 'Headless CMS',
+        image: { src: strapiImg },
       },
       {
-        name: 'Whitney Francis',
-        role: 'Content Specialist',
-        image: { src: imageWhitneyFrancis },
+        name: 'MongoDB',
+        role: 'NoSQL Database Management System',
+        image: { src: mongodbImg },
+      },
+    ],
+  },
+  {
+    title: 'Deployment & Hosting',
+    people: [
+      {
+        name: 'Vercel',
+        role: 'Deployment platform',
+        image: { src: vercelImg },
       },
       {
-        name: 'Jeffrey Webb',
-        role: 'Account Coordinator',
-        image: { src: imageJeffreyWebb },
-      },
-      {
-        name: 'Benjamin Russel',
-        role: 'Senior Developer',
-        image: { src: imageBenjaminRussel },
-      },
-      {
-        name: 'Angela Fisher',
-        role: 'Front-end Developer',
-        image: { src: imageAngelaFisher },
+        name: 'Hostinger',
+        role: 'Web hosting provider',
+        image: { src: hostingerImg },
       },
     ],
   },
@@ -100,49 +113,24 @@ const team = [
     title: 'Tools',
     people: [
       {
-        name: 'Chelsea Hagon',
-        role: 'Senior Developer',
-        image: { src: imageChelseaHagon },
+        name: 'Git',
+        role: 'Version control system',
+        image: { src: gitImg },
       },
       {
-        name: 'Emma Dorsey',
-        role: 'Senior Designer',
-        image: { src: imageEmmaDorsey },
+        name: 'Figma',
+        role: 'User interface design tool',
+        image: { src: figmaImg },
       },
       {
-        name: 'Leonard Krasner',
-        role: 'VP, User Experience',
-        image: { src: imageLeonardKrasner },
+        name: 'Rive',
+        role: 'Design tool for interactive animations',
+        image: { src: riveImg },
       },
       {
-        name: 'Blake Reid',
-        role: 'Junior Copywriter',
-        image: { src: imageBlakeReid },
-      },
-      {
-        name: 'Kathryn Murphy',
-        role: 'VP, Human Resources',
-        image: { src: imageKathrynMurphy },
-      },
-      {
-        name: 'Whitney Francis',
-        role: 'Content Specialist',
-        image: { src: imageWhitneyFrancis },
-      },
-      {
-        name: 'Jeffrey Webb',
-        role: 'Account Coordinator',
-        image: { src: imageJeffreyWebb },
-      },
-      {
-        name: 'Benjamin Russel',
-        role: 'Senior Developer',
-        image: { src: imageBenjaminRussel },
-      },
-      {
-        name: 'Angela Fisher',
-        role: 'Front-end Developer',
-        image: { src: imageAngelaFisher },
+        name: 'Wordpress',
+        role: 'Content Management System',
+        image: { src: wordpressImg },
       },
     ],
   },
@@ -170,16 +158,20 @@ function Team() {
                     <li key={person.name}>
                       <FadeIn>
                         <div className="group relative overflow-hidden rounded-3xl bg-neutral-100">
-                          <Image
-                            alt=""
-                            {...person.image}
-                            className="h-96 w-full object-cover grayscale transition duration-500 motion-safe:group-hover:scale-105"
-                          />
-                          <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black to-black/0 to-40% p-6">
-                            <p className="font-display text-base/6 font-semibold tracking-wide text-white">
+                          <div className="flex h-64 items-start justify-center p-4">
+                            <Image
+                              alt=""
+                              {...person.image}
+                              width={100}
+                              height={100}
+                              className="w-50 h-1/2 object-contain grayscale transition duration-500 motion-safe:group-hover:scale-110"
+                            />
+                          </div>
+                          <div className="absolute inset-0 flex flex-col justify-end  p-6">
+                            <p className="font-display text-base/6 font-semibold tracking-wide text-black">
                               {person.name}
                             </p>
-                            <p className="mt-2 text-sm text-white">
+                            <p className="mt-2 text-sm text-black">
                               {person.role}
                             </p>
                           </div>
@@ -204,7 +196,6 @@ export const metadata: Metadata = {
 }
 
 export default async function About() {
-
   return (
     <>
       <Team />
