@@ -1,0 +1,41 @@
+{
+  "emmet.includeLanguages": {
+    "postcss": "css"
+  },
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": false
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "workbench.iconTheme": "material-icon-theme",
+  "window.zoomLevel": 0,
+  "editor.tabSize": 2,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor. formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "editor.minimap.enabled": false,
+  "editor.font Family": "CommitMonoV138",
+  "git.confirmSync": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "typescript.update ImportsOnFileMove.enabled": "always",
+  "javascript.update ImportsOnFileMove. enabled": "always",
+  "workbench.colorTheme": "GitHub Dark",
+  "indentRainbow.colors": [
+    "rgba (255,255,64,0.05)",
+    "rgba(127, 255, 127,0.05)",
+    "rgba(255, 127,255,0.05)",
+    "rgba(79, 236, 236,0.05)"
+  ]
+}
