@@ -16,7 +16,6 @@ import gowind from '@/images/experiences/gowind.png'
 import Hsi from '@/images/experiences/hsi.jpg'
 import Oclock from '@/images/experiences/oclock.png'
 import logoBarillec from '@/images/logos/barillec.jpeg'
-import logoOclock from '@/images/logos/oclock.jpeg'
 import logoSnef from '@/images/logos/snef.png'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -49,7 +48,6 @@ function Section({
         <div className="mt-12 lg:mt-0 lg:w-[37rem] lg:flex-none lg:group-even/section:order-first">
           <FadeIn>
             <div className="font-display text-base font-semibold">
-              {'//  '}
               {company}
             </div>
             <span>{date}</span>
@@ -367,7 +365,8 @@ function Freelance01() {
 const clients = [
   ['Groupe Snef', logoSnef, 'https://www.snef.fr/'],
   ['Barillec', logoBarillec, 'https://www.barillec.fr/'],
-  ['Ayu & Ben', logoOclock, ''],
+  ['Bonheur en B', , 'https://www.barillec.fr/'],
+  ['Ayu & Ben', , ''],
 ]
 
 function Clients() {
@@ -380,19 +379,24 @@ function Clients() {
       </FadeIn>
       <FadeInStagger className="mt-10" faster>
         <Border as={FadeIn} />
-        <ul role="list" className="grid grid-cols-3 gap-x-8 gap-y-12">
+        <ul
+          role="list"
+          className="grid grid-cols-1 gap-x-8 gap-y-12 lg:grid-cols-4"
+        >
           {clients.map(([client, logo, link]) => (
             <li key={client as string} className="group">
               <FadeIn className="overflow-hidden">
-                <Border className="flex items-center justify-center gap-4 pt-12 tracking-widest group-[&:nth-child(1)]:-mt-px">
-                  <Image
-                    src={logo}
-                    alt={client as string}
-                    width={60}
-                    height={60}
-                    unoptimized
-                    className="rounded-lg"
-                  />
+                <Border className="flex h-32 items-center justify-center gap-4 pt-12 tracking-widest group-[&:nth-child(1)]:-mt-px">
+                  {logo && (
+                    <Image
+                      src={logo}
+                      alt={client as string}
+                      width={40}
+                      height={40}
+                      unoptimized
+                      className=""
+                    />
+                  )}
                   <Link href={String(link)} className="text-xl">
                     {String(client)}
                   </Link>

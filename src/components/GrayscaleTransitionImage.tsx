@@ -1,13 +1,13 @@
 'use client'
 
-import { useRef } from 'react'
-import Image, { type ImageProps } from 'next/image'
 import {
   motion,
   useMotionTemplate,
   useScroll,
   useTransform,
 } from 'framer-motion'
+import Image, { type ImageProps } from 'next/image'
+import { useRef } from 'react'
 
 const MotionImage = motion(Image)
 

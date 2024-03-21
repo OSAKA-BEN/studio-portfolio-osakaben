@@ -23,10 +23,10 @@ import typescriptImg from '@/images/stack/typescript.png'
 import vercelImg from '@/images/stack/vercel.png'
 import wordpressImg from '@/images/stack/wordpress.png'
 
-const team = [
+const tech = [
   {
     title: 'Frontend',
-    people: [
+    techology: [
       {
         name: 'JavaScript',
         role: 'Programming Language',
@@ -61,7 +61,7 @@ const team = [
   },
   {
     title: 'Backend',
-    people: [
+    techology: [
       {
         name: 'Node js',
         role: 'JavaScript runtime environment',
@@ -96,7 +96,7 @@ const team = [
   },
   {
     title: 'Deployment & Hosting',
-    people: [
+    techology: [
       {
         name: 'Vercel',
         role: 'Deployment platform',
@@ -111,7 +111,7 @@ const team = [
   },
   {
     title: 'Tools',
-    people: [
+    techology: [
       {
         name: 'Git',
         role: 'Version control system',
@@ -136,11 +136,11 @@ const team = [
   },
 ]
 
-function Team() {
+function Tech() {
   return (
     <Container className="mt-24 sm:mt-32 lg:mt-40">
       <div className="space-y-24">
-        {team.map((group) => (
+        {tech.map((group) => (
           <FadeInStagger key={group.title}>
             <Border as={FadeIn} />
             <div className="grid grid-cols-1 gap-6 pt-12 sm:pt-16 lg:grid-cols-4 xl:gap-8">
@@ -154,14 +154,14 @@ function Team() {
                   role="list"
                   className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-8"
                 >
-                  {group.people.map((person) => (
-                    <li key={person.name}>
+                  {group.techology.map((technology) => (
+                    <li key={technology.name}>
                       <FadeIn>
                         <div className="group relative overflow-hidden rounded-3xl bg-neutral-100">
                           <div className="flex h-64 items-start justify-center p-4">
                             <Image
                               alt=""
-                              {...person.image}
+                              {...technology.image}
                               width={100}
                               height={100}
                               className="w-50 h-1/2 object-contain grayscale transition duration-500 motion-safe:group-hover:scale-110"
@@ -169,10 +169,10 @@ function Team() {
                           </div>
                           <div className="absolute inset-0 flex flex-col justify-end  p-6">
                             <p className="font-display text-base/6 font-semibold tracking-wide text-black">
-                              {person.name}
+                              {technology.name}
                             </p>
                             <p className="mt-2 text-sm text-black">
-                              {person.role}
+                              {technology.role}
                             </p>
                           </div>
                         </div>
@@ -190,7 +190,7 @@ function Team() {
 }
 
 export const metadata: Metadata = {
-  title: 'About Us',
+  title: 'My Stack',
   description:
     'We believe that our strength lies in our collaborative approach, which puts our clients at the center of everything we do.',
 }
@@ -198,7 +198,7 @@ export const metadata: Metadata = {
 export default async function About() {
   return (
     <>
-      <Team />
+      <Tech />
     </>
   )
 }
