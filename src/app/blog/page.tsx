@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { type Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -11,7 +12,7 @@ import { formatDate } from '@/lib/formatDate'
 import { loadArticles } from '@/lib/mdx'
 
 export const metadata: Metadata = {
-  title: 'Blog',
+  title: 'My Dev Blog - Benjamin Guiganton',
   description:
     'Stay up-to-date with the latest industry news as our marketing teams finds new ways to re-purpose old CSS tricks articles.',
 }
@@ -21,10 +22,14 @@ export default async function Blog() {
 
   return (
     <>
-      <PageIntro eyebrow="Blog" title="The latest articles and news">
+      <PageIntro
+        eyebrow="My Dev Blog"
+        title="Follow my developer journey through my Dev Blog."
+      >
         <p>
-          Stay up-to-date with the latest industry news as our marketing teams
-          finds new ways to re-purpose old CSS tricks articles.
+          I would like to share what projects I have in mind. Talking to myself
+          about the architecture i choose and what problems I'm facing buidling
+          them or simply share my though about the tech world.
         </p>
       </PageIntro>
 

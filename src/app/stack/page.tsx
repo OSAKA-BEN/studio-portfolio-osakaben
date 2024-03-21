@@ -164,7 +164,7 @@ function Tech() {
                               {...technology.image}
                               width={100}
                               height={100}
-                              className="w-50 h-1/2 object-contain grayscale transition duration-500 motion-safe:group-hover:scale-110"
+                              className="w-50 h-1/2 object-contain transition duration-500 motion-safe:group-hover:scale-110"
                             />
                           </div>
                           <div className="absolute inset-0 flex flex-col justify-end  p-6">
@@ -190,7 +190,7 @@ function Tech() {
 }
 
 export const metadata: Metadata = {
-  title: 'My Stack',
+  title: 'My Stack - Benjamin Guiganton',
   description:
     'We believe that our strength lies in our collaborative approach, which puts our clients at the center of everything we do.',
 }

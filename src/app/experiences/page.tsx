@@ -4,9 +4,7 @@ import { type Metadata } from 'next'
 import { Border } from '@/components/Border'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
-import { GridList, GridListItem } from '@/components/GridList'
 import { PageIntro } from '@/components/PageIntro'
-import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { TagList, TagListItem } from '@/components/TagList'
 import Astrolable from '@/images/experiences/astrolable.jpg'
@@ -16,6 +14,7 @@ import gowind from '@/images/experiences/gowind.png'
 import Hsi from '@/images/experiences/hsi.jpg'
 import Oclock from '@/images/experiences/oclock.png'
 import logoBarillec from '@/images/logos/barillec.jpeg'
+import logoBonheurenb from '@/images/logos/logo-bonheur-en-b.jpeg'
 import logoSnef from '@/images/logos/snef.png'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -36,7 +35,7 @@ function Section({
   return (
     <Container className="group/section [counter-increment:section]">
       <div className="lg:flex lg:items-center lg:justify-end lg:gap-x-8 lg:group-even/section:justify-start xl:gap-x-20">
-        <div className="flex justify-center">
+        <div className="group flex justify-center">
           <FadeIn className="w-[33.75rem] flex-none lg:w-[45rem]">
             <StylizedImage
               {...image}
@@ -362,19 +361,66 @@ function Freelance01() {
   )
 }
 
-const clients = [
+const companies = [
   ['Groupe Snef', logoSnef, 'https://www.snef.fr/'],
   ['Barillec', logoBarillec, 'https://www.barillec.fr/'],
-  ['Bonheur en B', , 'https://www.barillec.fr/'],
-  ['Ayu & Ben', , ''],
 ]
 
-function Clients() {
+function Companies() {
   return (
     <Container className="mt-24 sm:mt-32 lg:mt-40">
       <FadeIn>
         <h2 className="font-display text-2xl font-semibold text-neutral-950">
           Companies I have worked for
+        </h2>
+      </FadeIn>
+      <FadeInStagger className="mt-10" faster>
+        <Border as={FadeIn} />
+        <ul
+          role="list"
+          className="grid grid-cols-1 gap-x-8 gap-y-12 lg:grid-cols-4"
+        >
+          {companies.map(([company, logo, link]) => (
+            <li key={company as string} className="group">
+              <FadeIn className="overflow-hidden">
+                <Border className="flex h-32 items-center justify-center gap-4 pt-12 tracking-widest group-[&:nth-child(1)]:-mt-px">
+                  {logo && (
+                    <Image
+                      src={logo}
+                      alt={company as string}
+                      width={40}
+                      height={40}
+                      unoptimized
+                      className=""
+                    />
+                  )}
+                  <Link href={String(link)} className="text-xl">
+                    {String(company)}
+                  </Link>
+                </Border>
+              </FadeIn>
+            </li>
+          ))}
+        </ul>
+      </FadeInStagger>
+    </Container>
+  )
+}
+
+const clients = [
+  [
+    'Bonheur en B',
+    logoBonheurenb,
+    'https://bonheur-en-a2ryai9y1-osaka-ben.vercel.app/',
+  ],
+]
+
+function Clients() {
+  return (
+    <Container className="mt-24">
+      <FadeIn>
+        <h2 className="font-display text-2xl font-semibold text-neutral-950">
+          Clients I have worked for
         </h2>
       </FadeIn>
       <FadeInStagger className="mt-10" faster>
@@ -410,54 +456,54 @@ function Clients() {
   )
 }
 
-function Values() {
-  return (
-    <div className="relative mt-24 pt-24 sm:mt-32 sm:pt-32 lg:mt-40 lg:pt-40">
-      <SectionIntro
-        eyebrow="My values"
-        title="Always trying to improve myself and my work"
-      >
-        <p>
-          I believe in efficiency and maximizing my resources to provide the
-          best value. I'm are committed to delivering high-quality services that
-          meet the needs of the clients.
-        </p>
-      </SectionIntro>
+const saas = [
+  ['Ayu & Ben', , ''],
+  ['ベンジャミン Coding', , ''],
+]
 
-      <Container className="mt-24">
-        <GridList>
-          <GridListItem title="Meticulous">
-            I pay attention to detail and I am always looking for ways to
-            improve my work.
-          </GridListItem>
-          <GridListItem title="Efficient">
-            I am always looking for ways to improve my efficiency and work
-            smart.
-          </GridListItem>
-          <GridListItem title="Adaptable">
-            I am flexible and adapt easily to a new environment or client needs.
-          </GridListItem>
-          <GridListItem title="Honest">
-            Mistakes happen, and when they do, i'm just fixing it and learn from
-            them. Mistakes are the best way to learn.
-          </GridListItem>
-          <GridListItem title="Loyal">
-            I will not let clients down and I will give my best to satisfy their
-            needs.
-          </GridListItem>
-          <GridListItem title="Innovative">
-            I'm curious and i like to try new things and to learn new
-            technologies. I'm always aware of the latest trends and
-            technologies.
-          </GridListItem>
-        </GridList>
-      </Container>
-    </div>
+function Saas() {
+  return (
+    <Container className="mt-24">
+      <FadeIn>
+        <h2 className="font-display text-2xl font-semibold text-neutral-950">
+          Saas that I'm building
+        </h2>
+      </FadeIn>
+      <FadeInStagger className="mt-10" faster>
+        <Border as={FadeIn} />
+        <ul
+          role="list"
+          className="grid grid-cols-1 gap-x-8 gap-y-12 lg:grid-cols-4"
+        >
+          {saas.map(([saas, logo, link]) => (
+            <li key={saas as string} className="group">
+              <FadeIn className="overflow-hidden">
+                <Border className="flex h-32 items-center justify-center gap-4 pt-12 tracking-widest group-[&:nth-child(1)]:-mt-px">
+                  {logo && (
+                    <Image
+                      src={logo}
+                      alt={saas as string}
+                      width={40}
+                      height={40}
+                      unoptimized
+                      className=""
+                    />
+                  )}
+                  <Link href={String(link)} className="text-xl">
+                    {String(saas)}
+                  </Link>
+                </Border>
+              </FadeIn>
+            </li>
+          ))}
+        </ul>
+      </FadeInStagger>
+    </Container>
   )
 }
 
 export const metadata: Metadata = {
-  title: 'My Experience',
+  title: 'My Experience - Benjamin Guiganton',
   description:
     'We believe in efficiency and maximizing our resources to provide the best value to our clients.',
 }
@@ -490,9 +536,9 @@ export default function Process() {
         <Freelance01 />
       </div>
 
+      <Companies />
       <Clients />
-
-      <Values />
+      <Saas />
     </>
   )
 }

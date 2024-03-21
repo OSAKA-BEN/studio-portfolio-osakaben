@@ -1,15 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useId } from 'react'
 import { type Metadata } from 'next'
-import Link from 'next/link'
+import { useId } from 'react'
 
-import { Border } from '@/components/Border'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
-import { Offices } from '@/components/Offices'
 import { PageIntro } from '@/components/PageIntro'
-import { SocialMedia } from '@/components/SocialMedia'
 
 function TextInput({
   label,
@@ -33,22 +29,6 @@ function TextInput({
         {label}
       </label>
     </div>
-  )
-}
-
-function RadioInput({
-  label,
-  ...props
-}: React.ComponentPropsWithoutRef<'input'> & { label: string }) {
-  return (
-    <label className="flex gap-x-3">
-      <input
-        type="radio"
-        {...props}
-        className="h-6 w-6 flex-none appearance-none rounded-full border border-neutral-950/20 outline-none checked:border-[0.5rem] checked:border-neutral-950 focus-visible:ring-1 focus-visible:ring-neutral-950 focus-visible:ring-offset-2"
-      />
-      <span className="text-base/6 text-neutral-950">{label}</span>
-    </label>
   )
 }
 
@@ -80,15 +60,14 @@ function ContactForm() {
   )
 }
 
-
 export const metadata: Metadata = {
-  title: 'Contact Me',
-  description: 'Let’s work together. We can’t wait to hear from you.',
+  title: 'Contact Me - Benjamin Guiganton',
+  description: 'Let’s work together. Can’t wait to hear from you.',
 }
 
 export default function Contact() {
   return (
-    <div className='flex flex-col justify-center mx-auto text-center'>
+    <div className="mx-auto flex flex-col justify-center text-center">
       <PageIntro eyebrow="Contact me" title="Let’s work together">
         <p>I'm impatient to hear from you.</p>
       </PageIntro>

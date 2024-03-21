@@ -1,14 +1,15 @@
-import Link from 'next/link'
 import clsx from 'clsx'
+import Link from 'next/link'
 
 function LinkedinIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg viewBox="0 0 24 24" {...props}>
-      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/>
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+      <rect width="4" height="12" x="2" y="9" />
+      <circle cx="4" cy="4" r="2" />
     </svg>
   )
 }
-
 
 function GitHubIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -22,11 +23,16 @@ function GitHubIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
-
-
 export const socialMediaProfiles = [
-  { title: 'Linkedin', href: 'https://www.linkedin.com/in/benjamin-guiganton-607123272/', icon: LinkedinIcon },
-  { title: 'GitHub', href: 'https://github.com/OSAKA-BEN', icon: GitHubIcon },
+  {
+    title: 'Linkedin',
+    href: 'https://www.linkedin.com/in/benjamin-guiganton-607123272/',
+  },
+  { title: 'GitHub', href: 'https://github.com/OSAKA-BEN' },
+  {
+    title: 'Resume',
+    href: '/pdf/English-Black White Minimalist CV Resume.pdf',
+  },
 ]
 
 export function SocialMedia({
@@ -54,9 +60,7 @@ export function SocialMedia({
               'transition',
               invert ? 'hover:text-neutral-200' : 'hover:text-neutral-700',
             )}
-          >
-            <socialMediaProfile.icon className="h-6 w-6 fill-current" />
-          </Link>
+          ></Link>
         </li>
       ))}
     </ul>

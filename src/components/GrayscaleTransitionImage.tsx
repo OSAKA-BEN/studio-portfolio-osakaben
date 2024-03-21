@@ -20,7 +20,7 @@ export function GrayscaleTransitionImage(
   let ref = useRef<React.ElementRef<'div'>>(null)
   let { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['start 65%', 'end 35%'],
+    offset: ['start 80%', 'end 20%'],
   })
   let grayscale = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0, 1])
   let filter = useMotionTemplate`grayscale(${grayscale})`

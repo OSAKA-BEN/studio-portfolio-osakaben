@@ -1,100 +1,151 @@
 /* eslint-disable react/no-unescaped-entities */
 import { type Metadata } from 'next'
-import Image from 'next/image'
-import Link from 'next/link'
 
+import { Border } from '@/components/Border'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
+import Image from 'next/image'
+
+import { GridList, GridListItem } from '@/components/GridList'
 import { SectionIntro } from '@/components/SectionIntro'
-import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
+import frenchflag from '@/images/flags/france.png'
+import japaneseflag from '@/images/flags/japon.png'
+import englishflag from '@/images/flags/unitedkingdom.png'
 
+const languages = [
+  ['French', frenchflag],
+  ['English', englishflag],
+  ['Japanese', japaneseflag],
+]
 
-function CaseStudies({
-  caseStudies,
-}: {
-  caseStudies: Array<MDXEntry<CaseStudy>>
-}) {
+function Languages() {
   return (
-    <>
-      <SectionIntro
-        title="Discover the project I have worked on"
-        className="mt-24 sm:mt-32 lg:mt-40"
-      >
-        <p>
-          We believe technology is the answer to the world’s greatest
-          challenges. It’s also the cause, so we find ourselves in bit of a
-          catch 22 situation.
-        </p>
-      </SectionIntro>
-      <Container className="mt-16">
-        <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-          {caseStudies.map((caseStudy) => (
-            <FadeIn key={caseStudy.href} className="flex">
-              <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
-                <h3>
-                  <Link href={caseStudy.href}>
-                    <span className="absolute inset-0 rounded-3xl" />
+    <Container className="mt-24 sm:mt-32 lg:mt-40">
+      <FadeIn>
+        <h2 className="font-display text-2xl font-semibold text-neutral-950">
+          Languages I speak
+        </h2>
+      </FadeIn>
+      <FadeInStagger className="mt-10" faster>
+        <Border as={FadeIn} />
+        <ul
+          role="list"
+          className="grid grid-cols-1 gap-x-8 gap-y-12 lg:grid-cols-3"
+        >
+          {languages.map(([language, logo]) => (
+            <li key={language as string} className="group">
+              <FadeIn className="overflow-hidden">
+                <Border className="flex h-32 items-center justify-center gap-4 pt-12 tracking-widest group-[&:nth-child(1)]:-mt-px">
+                  {logo && (
                     <Image
-                      src={caseStudy.logo}
-                      alt={caseStudy.client}
-                      className="h-16 w-16"
+                      src={logo}
+                      alt={language as string}
+                      width={40}
+                      height={40}
                       unoptimized
+                      className="border"
                     />
-                  </Link>
-                </h3>
-                <p className="mt-6 flex gap-x-2 text-sm text-neutral-950">
-                  <time
-                    dateTime={caseStudy.date.split('-')[0]}
-                    className="font-semibold"
-                  >
-                    {caseStudy.date.split('-')[0]}
-                  </time>
-                  <span className="text-neutral-300" aria-hidden="true">
-                    /
-                  </span>
-                  <span>Case study</span>
-                </p>
-                <p className="mt-6 font-display text-2xl font-semibold text-neutral-950">
-                  {caseStudy.title}
-                </p>
-                <p className="mt-4 text-base text-neutral-600">
-                  {caseStudy.description}
-                </p>
-              </article>
-            </FadeIn>
+                  )}
+                  <p className="text-xl">{String(language)}</p>
+                </Border>
+              </FadeIn>
+            </li>
           ))}
-        </FadeInStagger>
-      </Container>
-    </>
+        </ul>
+      </FadeInStagger>
+    </Container>
   )
 }
 
+function Values() {
+  return (
+    <div className="relative mt-24">
+      <SectionIntro
+        eyebrow="My values"
+        title="Always trying to improve myself and my work"
+      >
+        <p>
+          I believe in efficiency and maximizing my resources to provide the
+          best value. I'm are committed to delivering high-quality services that
+          meet the needs of the clients.
+        </p>
+      </SectionIntro>
+
+      <Container className="mt-24">
+        <GridList>
+          <GridListItem title="Meticulous">
+            I pay attention to detail and I am always looking for ways to
+            improve my work.
+          </GridListItem>
+          <GridListItem title="Efficient">
+            I am always looking for ways to improve my efficiency and work
+            smart.
+          </GridListItem>
+          <GridListItem title="Adaptable">
+            I am flexible and adapt easily to a new environment or client needs.
+          </GridListItem>
+          <GridListItem title="Honest">
+            Mistakes happen, and when they do, i'm just fixing it and learn from
+            them. Mistakes are the best way to learn.
+          </GridListItem>
+          <GridListItem title="Loyal">
+            I will not let clients down and I will give my best to satisfy their
+            needs.
+          </GridListItem>
+          <GridListItem title="Innovative">
+            I'm curious and i like to try new things and to learn new
+            technologies. I'm always aware of the latest trends and
+            technologies.
+          </GridListItem>
+        </GridList>
+      </Container>
+    </div>
+  )
+}
 
 export const metadata: Metadata = {
+  title: 'Benjamin Guiganton - Portfolio',
   description:
     'We are a development studio working at the intersection of design and technology.',
 }
 
 export default async function Home() {
-  let caseStudies = (await loadCaseStudies()).slice(0, 3)
-
   return (
     <>
-      <Container className="mt-24 sm:mt-32 md:mt-56">
-        <FadeIn className="max-w-3xl">
-          <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-            Hello, <br/>
-            I'm Benjamin.
-          </h1>
-          <p className="mt-6 text-xl text-neutral-600">
-            We are a development studio working at the intersection of design
-            and technology. It’s a really busy intersection though — a lot of
-            our staff have been involved in hit and runs.
-          </p>
+      <Container className="mt-24">
+        <FadeIn className="flex max-w-7xl flex-col gap-8 lg:flex-row">
+          <div className="lg:w-2/3">
+            <h1 className="max-w-4xl font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
+              Hello, <br />
+              I'm Benjamin.
+            </h1>
+            <p className="mt-6 text-xl text-neutral-600">
+              After spending 10 years in the shipbuilding industry in various
+              roles like Assembler, Team Leader, Site Manager, Project Manager
+              and Business Manager. I recently embarked on a career change in
+              the IT industry. <br />
+              <br />
+              I have completed a 6 month bootcamp in web development, obtain my
+              diplom and I am currently working as a Freelance Developer. I am
+              looking for a new challenge and am open to new opportunities.
+              <br />
+              <br />I like to learn and to level up. I am creative , motivated
+              and hard worker.
+            </p>
+          </div>
+          <div className="flex items-end lg:w-1/3">
+            <Image
+              src="/benjamin.png"
+              alt="Benjamin"
+              width={600}
+              height={600}
+              className="w-full rounded-xl"
+            />
+          </div>
         </FadeIn>
       </Container>
-
-      <CaseStudies caseStudies={caseStudies} />
+      <Languages />
+      <Values />
     </>
   )
 }

@@ -6,7 +6,6 @@ import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { GrayscaleTransitionImage } from '@/components/GrayscaleTransitionImage'
 import { PageIntro } from '@/components/PageIntro'
-import Image from 'next/image'
 import Link from 'next/link'
 
 import chartjsImg from '@/images/stack/chartjs.png'
@@ -173,12 +172,10 @@ function Projects() {
                         <FadeIn>
                           <div className="group relative flex h-24 w-24 flex-col overflow-hidden rounded-xl bg-neutral-100 p-4">
                             <div className="flex h-2/3 items-start justify-center">
-                              <Image
-                                alt=""
+                              <GrayscaleTransitionImage
                                 {...technology.src}
-                                width={50}
-                                height={50}
-                                className="h-8 w-8 object-contain grayscale transition duration-500 motion-safe:group-hover:scale-110"
+                                sizes="(min-width: 768px) 42rem, 100vw"
+                                className="h-8 w-8 rounded-xl object-contain"
                               />
                             </div>
                             <div className="flex h-1/3 items-end justify-center">
@@ -202,7 +199,7 @@ function Projects() {
 }
 
 export const metadata: Metadata = {
-  title: 'My Work',
+  title: 'My Work - Benjamin Guiganton',
   description:
     'We believe in efficiency and maximizing our resources to provide the best value to our clients.',
 }
