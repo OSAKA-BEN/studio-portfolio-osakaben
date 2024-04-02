@@ -31,7 +31,7 @@ export const socialMediaProfiles = [
   { title: 'GitHub', href: 'https://github.com/OSAKA-BEN' },
   {
     title: 'Resume',
-    href: '/pdf/English-Black White Minimalist CV Resume.pdf',
+    href: '/pdf/Resume-Benjamin GUIGANTON-2024.pdf',
   },
 ]
 
