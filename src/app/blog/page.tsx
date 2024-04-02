@@ -35,45 +35,49 @@ export default async function Blog() {
 
       <Container className="mt-24 sm:mt-32 lg:mt-40">
         <div className="space-y-24 lg:space-y-32">
-          {articles.map((article) => (
-            <FadeIn key={article.href}>
-              <article>
-                <Border className="pt-16">
-                  <div className="relative lg:-mx-4 lg:flex lg:justify-end">
-                    <div className="pt-10 lg:w-2/3 lg:flex-none lg:px-4 lg:pt-0">
-                      <h2 className="font-display text-2xl font-semibold text-neutral-950">
-                        <Link href={article.href}>{article.title}</Link>
-                      </h2>
-                      <time dateTime={article.date} className="text-sm">
-                        {formatDate(article.date)}
-                      </time>
-                      <dl className="lg:absolute lg:left-0 lg:top-0 lg:w-1/3 lg:px-4">
-                        <div className="flex-none overflow-hidden rounded-xl bg-neutral-100">
-                          <div className="sm:flex sm:items-center sm:gap-x-6 lg:block">
-                            <GrayscaleTransitionImage
-                              {...article.img}
-                              sizes="(min-width: 768px) 42rem, 100vw"
-                              className="aspect-[16/10] w-full rounded-xl object-cover"
-                            />
+          {articles.length === 0 ? (
+            <p className="flex justify-center">No articles found. (yet)</p>
+          ) : (
+            articles.map((article) => (
+              <FadeIn key={article.href}>
+                <article>
+                  <Border className="pt-16">
+                    <div className="relative lg:-mx-4 lg:flex lg:justify-end">
+                      <div className="pt-10 lg:w-2/3 lg:flex-none lg:px-4 lg:pt-0">
+                        <h2 className="font-display text-2xl font-semibold text-neutral-950">
+                          <Link href={article.href}>{article.title}</Link>
+                        </h2>
+                        <time dateTime={article.date} className="text-sm">
+                          {formatDate(article.date)}
+                        </time>
+                        <dl className="lg:absolute lg:left-0 lg:top-0 lg:w-1/3 lg:px-4">
+                          <div className="flex-none overflow-hidden rounded-xl bg-neutral-100">
+                            <div className="sm:flex sm:items-center sm:gap-x-6 lg:block">
+                              <GrayscaleTransitionImage
+                                {...article.img}
+                                sizes="(min-width: 768px) 42rem, 100vw"
+                                className="aspect-[16/10] w-full rounded-xl object-cover"
+                              />
+                            </div>
                           </div>
-                        </div>
-                      </dl>
-                      <p className="mt-6 max-w-2xl text-base text-neutral-600">
-                        {article.description}
-                      </p>
-                      <Button
-                        href={article.href}
-                        aria-label={`Read more: ${article.title}`}
-                        className="mt-8"
-                      >
-                        Read more
-                      </Button>
+                        </dl>
+                        <p className="mt-6 max-w-2xl text-base text-neutral-600">
+                          {article.description}
+                        </p>
+                        <Button
+                          href={article.href}
+                          aria-label={`Read more: ${article.title}`}
+                          className="mt-8"
+                        >
+                          Read more
+                        </Button>
+                      </div>
                     </div>
-                  </div>
-                </Border>
-              </article>
-            </FadeIn>
-          ))}
+                  </Border>
+                </article>
+              </FadeIn>
+            ))
+          )}
         </div>
       </Container>
     </>
