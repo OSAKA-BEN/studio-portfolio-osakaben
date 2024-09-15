@@ -61,7 +61,7 @@ const projectsData = [
     title: 'OWorld',
     href: 'https://oworld.space/',
     summary: [
-      'OWorld offers an immersive experience to explore and discover varied information about the planets and different countries of the world',
+      'OWorld offers an immersive experience to explore and discover varied information about the planets and different countries of the world.',
     ],
     image: { src: oworldImg },
     date: '2023',
@@ -143,7 +143,7 @@ function Projects() {
       <div className="mt-10 space-y-20 sm:space-y-24 lg:space-y-32">
         {projectsData.map((project) => (
           <FadeIn key={project.title}>
-            <article>
+            <article id={project.title}>
               <Border className="grid grid-cols-3 gap-x-8 gap-y-8 pt-16">
                 <div className="col-span-full sm:flex sm:items-center sm:justify-between sm:gap-x-8 lg:col-span-1 lg:block">
                   <div className="sm:flex sm:items-center sm:gap-x-6 lg:block">

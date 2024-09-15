@@ -8,6 +8,7 @@ import Image from 'next/image'
 
 import { GridList, GridListItem } from '@/components/GridList'
 import { SectionIntro } from '@/components/SectionIntro'
+import { ThreeColumnsWithImages } from '@/components/ThreeColumnsWithImages'
 import frenchflag from '@/images/flags/france.png'
 import japaneseflag from '@/images/flags/japon.png'
 import englishflag from '@/images/flags/unitedkingdom.png'
@@ -146,6 +147,7 @@ export default async function Home() {
           </div>
         </FadeIn>
       </Container>
+      <ThreeColumnsWithImages />
       <Languages />
     </>
   )

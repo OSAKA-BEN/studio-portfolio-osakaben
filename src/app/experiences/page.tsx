@@ -1,12 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
 import { type Metadata } from 'next'
 
-import { Border } from '@/components/Border'
 import { Container } from '@/components/Container'
-import { FadeIn, FadeInStagger } from '@/components/FadeIn'
+import { FadeIn } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { TagList, TagListItem } from '@/components/TagList'
+import { CirclePlay } from 'lucide-react'
+
 import Astrolable from '@/images/experiences/astrolable.jpg'
 import AyuBen from '@/images/experiences/ayuandben.png'
 import Bho2m from '@/images/experiences/bho2m.jpg'
@@ -14,10 +15,6 @@ import coding from '@/images/experiences/coding.jpeg'
 import gowind from '@/images/experiences/gowind.png'
 import Hsi from '@/images/experiences/hsi.jpg'
 import Oclock from '@/images/experiences/oclock.png'
-import logoBarillec from '@/images/logos/barillec.jpeg'
-import logoBonheurenb from '@/images/logos/logo-bonheur-en-b.jpeg'
-import logoSnef from '@/images/logos/snef.png'
-import Image from 'next/image'
 import Link from 'next/link'
 
 function Section({
@@ -184,6 +181,18 @@ function GroupSnef03() {
           on ships in Morocco and on Reunion Island.
         </p>
       </div>
+
+      <Link
+        href="https://youtu.be/aBgMCxI-r_c"
+        target="_blank"
+        className="group mt-12 flex w-fit items-center gap-2 rounded-full bg-red-500 px-4 py-2 text-white hover:bg-red-600"
+      >
+        <CirclePlay
+          strokeWidth={1}
+          className="mr-1 h-6 w-6 group-hover:scale-110"
+        />
+        Watch the video
+      </Link>
 
       <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
         Skills
@@ -391,155 +400,73 @@ function Freelance02() {
         Skills
       </h3>
       <TagList className="mt-4">
-        <TagListItem>Building a Saas</TagListItem>
-        <TagListItem>Teach</TagListItem>
-        <TagListItem>Create</TagListItem>
-        <TagListItem>Autonomy</TagListItem>
-        <TagListItem>Marketing</TagListItem>
-        <TagListItem>Architecture</TagListItem>
+        <TagListItem>Teaching</TagListItem>
+        <TagListItem>Creativity</TagListItem>
+        <TagListItem>Adaptation</TagListItem>
+        <TagListItem>Comprehension</TagListItem>
       </TagList>
     </Section>
   )
 }
 
-const companies = [
-  ['Groupe Snef', logoSnef, 'https://www.snef.fr/'],
-  ['Barillec', logoBarillec, 'https://www.barillec.fr/'],
-]
-
-function Companies() {
+function Freelance03() {
   return (
-    <Container className="mt-24 sm:mt-32 lg:mt-40">
-      <FadeIn>
-        <h2 className="font-display text-2xl font-semibold text-neutral-950">
-          Companies I have worked for
-        </h2>
-      </FadeIn>
-      <FadeInStagger className="mt-10" faster>
-        <Border as={FadeIn} className="w-60" />
-        <ul
-          role="list"
-          className="grid grid-cols-1 gap-x-8 gap-y-12 lg:grid-cols-4"
-        >
-          {companies.map(([company, logo, link]) => (
-            <li key={company as string} className="group">
-              <FadeIn className="overflow-hidden">
-                <Border className="flex h-32 items-center justify-center gap-4 pt-12 tracking-widest group-[&:nth-child(1)]:-mt-px">
-                  {logo && (
-                    <Image
-                      src={logo}
-                      alt={company as string}
-                      width={40}
-                      height={40}
-                      unoptimized
-                      className=""
-                    />
-                  )}
-                  <Link href={String(link)} className="text-xl">
-                    {String(company)}
-                  </Link>
-                </Border>
-              </FadeIn>
-            </li>
-          ))}
-        </ul>
-      </FadeInStagger>
-    </Container>
-  )
-}
+    <Section
+      title="Building a Saas"
+      image={{ src: coding }}
+      company="Loop"
+      date="January 2024 - Now"
+    >
+      <div className="space-y-6 text-base text-neutral-600">
+        <p>
+          ベンジャミン Coding is a small school that{' '}
+          <strong className="font-semibold text-neutral-950">
+            teach programming
+          </strong>{' '}
+          to the young generation . Students embrace learning as they{' '}
+          <strong className="font-semibold text-neutral-950">
+            play and write code
+          </strong>{' '}
+          from the very start of their adventure, promoting active learning and
+          a growth mindset.
+        </p>
+        <p>
+          They learn Python, JavaScript or C++ while having fun with educational
+          programs like codecombat or minecraft education. Children develop a
+          logical mind to{' '}
+          <strong className="font-semibold text-neutral-950">
+            solve problems
+          </strong>
+          . We also learn English through programming languages and through the
+          actions that their character must carry out.
+        </p>
+        <p>
+          At the start of each course, they{' '}
+          <strong className="font-semibold text-neutral-950">
+            practice typing on the keyboard
+          </strong>{' '}
+          with English words so that they feel as comfortable as possible with
+          writing on the keyboard and become familiar with English words. We
+          also{' '}
+          <strong className="font-semibold text-neutral-950">
+            make small robots that we then program
+          </strong>{' '}
+          using blocks to make them do the desired actions.
+        </p>
+      </div>
 
-const clients = [
-  [
-    'Bonheur en B',
-    logoBonheurenb,
-    'https://bonheur-en-a2ryai9y1-osaka-ben.vercel.app/',
-  ],
-]
-
-function Clients() {
-  return (
-    <Container className="mt-24">
-      <FadeIn>
-        <h2 className="font-display text-2xl font-semibold text-neutral-950">
-          Clients I have worked for
-        </h2>
-      </FadeIn>
-      <FadeInStagger className="mt-10" faster>
-        <Border as={FadeIn} className="w-60" />
-        <ul
-          role="list"
-          className="grid grid-cols-1 gap-x-8 gap-y-12 lg:grid-cols-4"
-        >
-          {clients.map(([client, logo, link]) => (
-            <li key={client as string} className="group">
-              <FadeIn className="overflow-hidden">
-                <Border className="flex h-32 items-center justify-center gap-4 pt-12 tracking-widest group-[&:nth-child(1)]:-mt-px">
-                  {logo && (
-                    <Image
-                      src={logo}
-                      alt={client as string}
-                      width={40}
-                      height={40}
-                      unoptimized
-                      className=""
-                    />
-                  )}
-                  <Link href={String(link)} className="text-xl">
-                    {String(client)}
-                  </Link>
-                </Border>
-              </FadeIn>
-            </li>
-          ))}
-        </ul>
-      </FadeInStagger>
-    </Container>
-  )
-}
-
-const saas = [
-  ['Ayu & Ben', , 'https://ayuandben.com'],
-  ['Loop', , 'https://loop-learn-english.jp'],
-]
-
-function Saas() {
-  return (
-    <Container className="mt-24">
-      <FadeIn>
-        <h2 className="font-display text-2xl font-semibold text-neutral-950">
-          Saas that I built
-        </h2>
-      </FadeIn>
-      <FadeInStagger className="mt-10" faster>
-        <Border as={FadeIn} className="w-60" />
-        <ul
-          role="list"
-          className="grid grid-cols-1 gap-x-8 gap-y-12 lg:grid-cols-4"
-        >
-          {saas.map(([saas, logo, link]) => (
-            <li key={saas as string} className="group">
-              <FadeIn className="overflow-hidden">
-                <Border className="flex h-32 items-center justify-center gap-4 pt-12 tracking-widest group-[&:nth-child(1)]:-mt-px">
-                  {logo && (
-                    <Image
-                      src={logo}
-                      alt={saas as string}
-                      width={40}
-                      height={40}
-                      unoptimized
-                      className=""
-                    />
-                  )}
-                  <Link href={String(link)} className="text-xl">
-                    {String(saas)}
-                  </Link>
-                </Border>
-              </FadeIn>
-            </li>
-          ))}
-        </ul>
-      </FadeInStagger>
-    </Container>
+      <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
+        Skills
+      </h3>
+      <TagList className="mt-4">
+        <TagListItem>Building a Saas</TagListItem>
+        <TagListItem>Market research</TagListItem>
+        <TagListItem>Autonomy</TagListItem>
+        <TagListItem>Marketing</TagListItem>
+        <TagListItem>Architecture</TagListItem>
+        <TagListItem>Adaptability to Japanese Market</TagListItem>
+      </TagList>
+    </Section>
   )
 }
 
@@ -567,11 +494,8 @@ export default function Process() {
         <Oclock01 />
         <Freelance01 />
         <Freelance02 />
+        <Freelance03 />
       </div>
-
-      <Companies />
-      <Clients />
-      <Saas />
     </>
   )
 }
