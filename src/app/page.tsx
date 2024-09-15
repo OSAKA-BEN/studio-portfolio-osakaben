@@ -135,7 +135,7 @@ export default async function Home() {
           </div>
           <div className="flex items-end lg:w-1/3">
             <Image
-              src="/benjamin.png"
+              src="/benjamin.jpeg"
               alt="Benjamin"
               width={600}
               height={600}
@@ -145,7 +145,6 @@ export default async function Home() {
         </FadeIn>
       </Container>
       <Languages />
-      <Values />
     </>
   )
 }

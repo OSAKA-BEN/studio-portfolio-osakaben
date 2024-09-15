@@ -18,6 +18,7 @@ import reduxImg from '@/images/stack/redux.png'
 import riveImg from '@/images/stack/rive.png'
 import sequelizeImg from '@/images/stack/sequelize.png'
 import strapiImg from '@/images/stack/strapi.png'
+import supabaseImg from '@/images/stack/supabase.png'
 import tailwindImg from '@/images/stack/tailwind.png'
 import typescriptImg from '@/images/stack/typescript.png'
 import vercelImg from '@/images/stack/vercel.png'
@@ -91,6 +92,11 @@ const tech = [
         name: 'MongoDB',
         role: 'NoSQL Database Management System',
         image: { src: mongodbImg },
+      },
+      {
+        name: 'Supabase',
+        role: 'Open-source Firebase alternative',
+        image: { src: supabaseImg },
       },
     ],
   },

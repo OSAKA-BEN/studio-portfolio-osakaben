@@ -8,7 +8,7 @@ import { PageIntro } from '@/components/PageIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { TagList, TagListItem } from '@/components/TagList'
 import Astrolable from '@/images/experiences/astrolable.jpg'
-import AyuBen from '@/images/experiences/ayu&ben.jpg'
+import AyuBen from '@/images/experiences/ayuandben.png'
 import Bho2m from '@/images/experiences/bho2m.jpg'
 import gowind from '@/images/experiences/gowind.png'
 import Hsi from '@/images/experiences/hsi.jpg'
@@ -296,7 +296,7 @@ function Oclock01() {
 function Freelance01() {
   return (
     <Section
-      title="Web Developer"
+      title="Building a Saas"
       image={{ src: AyuBen }}
       company="Ayu & Ben"
       date="January 2024 - Now"
@@ -320,29 +320,8 @@ function Freelance01() {
           </strong>{' '}
           to{' '}
           <strong className="font-semibold text-neutral-950">
-            track their progress and scores
+            track their progress and scores.
           </strong>
-          . Ayu & Ben also offers a program of online courses taught by
-          experienced Japanese teachers for{' '}
-          <strong className="font-semibold text-neutral-950">
-            interactive exchanges
-          </strong>{' '}
-          between learners and teachers.
-        </p>
-        <p>
-          With the explosion of{' '}
-          <strong className="font-semibold text-neutral-950">AI</strong> in 2024
-          and the opening of the GPT Store, the platform will offer a chat to be
-          able to chat with the community of learners by level but also with a
-          pre-configured AI according to the user's level in order to so that he
-          can practice the language. The AI will then become a real teacher
-          available 24/7 to answer students' questions and they will also be
-          able to practice the language orally. This platform therefore offers
-          an{' '}
-          <strong className="font-semibold text-neutral-950">
-            immersive and complete experience for learning
-          </strong>{' '}
-          the Japanese language.
         </p>
       </div>
 
@@ -457,8 +436,8 @@ function Clients() {
 }
 
 const saas = [
-  ['Ayu & Ben', , ''],
-  ['ベンジャミン Coding', , ''],
+  ['Ayu & Ben', , 'https://ayuandben.com'],
+  ['Loop', , 'https://loop-learn-english.jp'],
 ]
 
 function Saas() {
@@ -466,7 +445,7 @@ function Saas() {
     <Container className="mt-24">
       <FadeIn>
         <h2 className="font-display text-2xl font-semibold text-neutral-950">
-          Saas that I'm building
+          Saas that I built
         </h2>
       </FadeIn>
       <FadeInStagger className="mt-10" faster>

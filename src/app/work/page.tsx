@@ -14,20 +14,21 @@ import excelImg from '@/images/stack/excel.png'
 import figmaImg from '@/images/stack/figma.png'
 import framermotionImg from '@/images/stack/framermotion.svg'
 import nextjsImg from '@/images/stack/nextjs.png'
+import postgresqlImg from '@/images/stack/postgresql.png'
 import reactImg from '@/images/stack/reactjs.png'
 import redisImg from '@/images/stack/redis.png'
 import reduxImg from '@/images/stack/redux.png'
-import strapiImg from '@/images/stack/strapi.png'
+import supabaseImg from '@/images/stack/supabase.png'
 import tailwindcssImg from '@/images/stack/tailwind.png'
 import typescriptImg from '@/images/stack/typescript.png'
 import vbaImg from '@/images/stack/vba.png'
 import viteImg from '@/images/stack/vite.png'
-
 import appchantierImg from '@/images/work/appchantier.jpg'
+import ayuandbenImg from '@/images/work/ayuandben.png'
 import bonheurenbImg from '@/images/work/bonheurenb.jpg'
 import chezgImg from '@/images/work/chezg.jpg'
+import loopImg from '@/images/work/loop.png'
 import oworldImg from '@/images/work/oworld.jpg'
-import risingsunImg from '@/images/work/risingsun.jpg'
 
 const projectsData = [
   {
@@ -93,11 +94,11 @@ const projectsData = [
   },
   {
     title: 'Ayu & Ben',
-    href: null,
+    href: 'https://ayuandben.com/',
     summary: [
-      "An e-learning platform for learning Japanese online with real monitoring of the user's progress.",
+      "An e-learning platform for learning Japanese online with interractive lessons and exercises. It also allows to follow the user's progress.",
     ],
-    image: { src: risingsunImg },
+    image: { src: ayuandbenImg },
     date: '2024',
     technology: [
       { name: 'Figma', src: figmaImg },
@@ -106,7 +107,27 @@ const projectsData = [
       { name: 'TailwindCSS', src: tailwindcssImg },
       { name: 'Framer', src: framermotionImg },
       { name: 'TypeScript', src: typescriptImg },
-      { name: 'Strapi', src: strapiImg },
+      { name: 'Supabase', src: supabaseImg },
+      { name: 'PostgreSQL', src: postgresqlImg },
+    ],
+  },
+  {
+    title: 'Loop',
+    href: 'https://loop-learn-english.jp/',
+    summary: [
+      'A web application that allows to learn english vocabulary through active method exercises. Words are displayed in Japanese and the user has to choose type the word in english. For each word, the user can hear the right pronunciation with native audio. ',
+    ],
+    image: { src: loopImg },
+    date: '2024',
+    technology: [
+      { name: 'Figma', src: figmaImg },
+      { name: 'React', src: reactImg },
+      { name: 'NextJs', src: nextjsImg },
+      { name: 'TailwindCSS', src: tailwindcssImg },
+      { name: 'Framer', src: framermotionImg },
+      { name: 'TypeScript', src: typescriptImg },
+      { name: 'Supabase', src: supabaseImg },
+      { name: 'PostgreSQL', src: postgresqlImg },
     ],
   },
 ]
