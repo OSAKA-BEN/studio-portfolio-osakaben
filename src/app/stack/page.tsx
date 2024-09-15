@@ -1,9 +1,9 @@
 import { type Metadata } from 'next'
-import Image from 'next/image'
 
 import { Border } from '@/components/Border'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
+import { GrayscaleTransitionImage } from '@/components/GrayscaleTransitionImage'
 import figmaImg from '@/images/stack/figma.png'
 import gitImg from '@/images/stack/git.png'
 import hostingerImg from '@/images/stack/hostinger.png'
@@ -34,12 +34,12 @@ const tech = [
         image: { src: javascriptImg },
       },
       {
-        name: 'React',
+        name: '',
         role: 'JavaScript Library',
         image: { src: reactImg },
       },
       {
-        name: 'Nextjs',
+        name: '',
         role: 'JavaScript framework for server-side rendering',
         image: { src: nextjsImg },
       },
@@ -69,7 +69,7 @@ const tech = [
         image: { src: nodejsImg },
       },
       {
-        name: 'PostgreSQL',
+        name: '',
         role: 'Database management system',
         image: { src: postgresqlImg },
       },
@@ -84,12 +84,12 @@ const tech = [
         image: { src: redisImg },
       },
       {
-        name: 'Strapi',
+        name: '',
         role: 'Headless CMS',
         image: { src: strapiImg },
       },
       {
-        name: 'MongoDB',
+        name: '',
         role: 'NoSQL Database Management System',
         image: { src: mongodbImg },
       },
@@ -104,7 +104,7 @@ const tech = [
     title: 'Deployment & Hosting',
     techology: [
       {
-        name: 'Vercel',
+        name: '',
         role: 'Deployment platform',
         image: { src: vercelImg },
       },
@@ -165,12 +165,10 @@ function Tech() {
                       <FadeIn>
                         <div className="group relative overflow-hidden rounded-3xl bg-neutral-100">
                           <div className="flex h-64 items-start justify-center p-4">
-                            <Image
-                              alt=""
+                            <GrayscaleTransitionImage
                               {...technology.image}
-                              width={100}
-                              height={100}
-                              className="w-50 h-1/2 object-contain transition duration-500 motion-safe:group-hover:scale-110"
+                              sizes="(min-width: 768px) 42rem, 100vw"
+                              className="w-50 flex aspect-[16/9] h-1/2 object-contain"
                             />
                           </div>
                           <div className="absolute inset-0 flex flex-col justify-end  p-6">
@@ -198,10 +196,10 @@ function Tech() {
 export const metadata: Metadata = {
   title: 'My Stack - Benjamin Guiganton',
   description:
-    'We believe that our strength lies in our collaborative approach, which puts our clients at the center of everything we do.',
+    'Explore the diverse set of technologies and tools I leverage to build innovative web solutions. From front-end to back-end, my stack is continually evolving to include the latest and most efficient frameworks and languages.',
 }
 
-export default async function About() {
+export default async function Stack() {
   return (
     <>
       <Tech />

@@ -1,5 +1,5 @@
-import { type ImageProps } from 'next/image'
 import glob from 'fast-glob'
+import { type ImageProps } from 'next/image'
 
 async function loadEntries<T extends { date: string }>(
   directory: string,
@@ -31,6 +31,7 @@ export interface Article {
   date: string
   title: string
   description: string
+  img: ImagePropsWithOptionalAlt
   author: {
     name: string
     role: string

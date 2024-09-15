@@ -66,8 +66,7 @@ function Values() {
       >
         <p>
           I believe in efficiency and maximizing my resources to provide the
-          best value. I'm are committed to delivering high-quality services that
-          meet the needs of the clients.
+          best value.
         </p>
       </SectionIntro>
 
@@ -106,7 +105,7 @@ function Values() {
 export const metadata: Metadata = {
   title: 'Benjamin Guiganton - Portfolio',
   description:
-    'We are a development studio working at the intersection of design and technology.',
+    'Welcome to the portfolio of Benjamin Guiganton, a dynamic web developer with a rich background in project management and a passion for technology and innovation. Explore my journey from naval construction to creating cutting-edge web solutions and learning platforms.',
 }
 
 export default async function Home() {
@@ -125,15 +124,18 @@ export default async function Home() {
               and Business Manager. I recently embarked on a career change in
               the IT industry. <br />
               <br />
-              I have completed a 6 month bootcamp in web development, obtain my
-              diplom and I am currently working as a Freelance Developer. I am
-              looking for a new challenge and am open to new opportunities.
+              I have been coding for many years in VBA, especially algorithms to
+              handle a lot of data in Excel, but I also wanted to get more
+              involved in programming and I started to broaden my skills in web
+              development and successfully passed my exam. I am currently
+              working as a Freelance Developer.
               <br />
-              <br />I like to learn and to level up. I am creative , motivated
-              and hard worker.
+              <br />I recently started creating my own Saas wich brings together
+              a lot of diverse skills but the adventure is worth it. I also
+              teach programming to children.
             </p>
           </div>
-          <div className="flex items-end lg:w-1/3">
+          <div className="flex items-center lg:w-1/3">
             <Image
               src="/benjamin.jpeg"
               alt="Benjamin"

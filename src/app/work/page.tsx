@@ -222,7 +222,7 @@ function Projects() {
 export const metadata: Metadata = {
   title: 'My Work - Benjamin Guiganton',
   description:
-    'We believe in efficiency and maximizing our resources to provide the best value to our clients.',
+    'Explore a curated selection of my web development projects, including bespoke SaaS platforms, freelance websites, and e-learning solutions. Each project exemplifies my approach to solving real-world problems through innovative technology and design.',
 }
 
 export default async function Work() {

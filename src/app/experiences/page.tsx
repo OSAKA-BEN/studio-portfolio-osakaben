@@ -10,6 +10,7 @@ import { TagList, TagListItem } from '@/components/TagList'
 import Astrolable from '@/images/experiences/astrolable.jpg'
 import AyuBen from '@/images/experiences/ayuandben.png'
 import Bho2m from '@/images/experiences/bho2m.jpg'
+import coding from '@/images/experiences/coding.jpeg'
 import gowind from '@/images/experiences/gowind.png'
 import Hsi from '@/images/experiences/hsi.jpg'
 import Oclock from '@/images/experiences/oclock.png'
@@ -340,6 +341,67 @@ function Freelance01() {
   )
 }
 
+function Freelance02() {
+  return (
+    <Section
+      title="Teach Programming"
+      image={{ src: coding }}
+      company="ベンジャミン Coding"
+      date="January 2024 - Now"
+    >
+      <div className="space-y-6 text-base text-neutral-600">
+        <p>
+          ベンジャミン Coding is a small school that{' '}
+          <strong className="font-semibold text-neutral-950">
+            teach programming
+          </strong>{' '}
+          to the young generation . Students embrace learning as they{' '}
+          <strong className="font-semibold text-neutral-950">
+            play and write code
+          </strong>{' '}
+          from the very start of their adventure, promoting active learning and
+          a growth mindset.
+        </p>
+        <p>
+          They learn Python, JavaScript or C++ while having fun with educational
+          programs like codecombat or minecraft education. Children develop a
+          logical mind to{' '}
+          <strong className="font-semibold text-neutral-950">
+            solve problems
+          </strong>
+          . We also learn English through programming languages and through the
+          actions that their character must carry out.
+        </p>
+        <p>
+          At the start of each course, they{' '}
+          <strong className="font-semibold text-neutral-950">
+            practice typing on the keyboard
+          </strong>{' '}
+          with English words so that they feel as comfortable as possible with
+          writing on the keyboard and become familiar with English words. We
+          also{' '}
+          <strong className="font-semibold text-neutral-950">
+            make small robots that we then program
+          </strong>{' '}
+          using blocks to make them do the desired actions.
+        </p>
+      </div>
+
+      <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
+        Skills
+      </h3>
+      <TagList className="mt-4">
+        <TagListItem>Building a Saas</TagListItem>
+        <TagListItem>Teach</TagListItem>
+        <TagListItem>Create</TagListItem>
+        <TagListItem>Autonomy</TagListItem>
+        <TagListItem>Marketing</TagListItem>
+        <TagListItem>Architecture</TagListItem>
+      </TagList>
+    </Section>
+  )
+}
+
 const companies = [
   ['Groupe Snef', logoSnef, 'https://www.snef.fr/'],
   ['Barillec', logoBarillec, 'https://www.barillec.fr/'],
@@ -354,7 +416,7 @@ function Companies() {
         </h2>
       </FadeIn>
       <FadeInStagger className="mt-10" faster>
-        <Border as={FadeIn} />
+        <Border as={FadeIn} className="w-60" />
         <ul
           role="list"
           className="grid grid-cols-1 gap-x-8 gap-y-12 lg:grid-cols-4"
@@ -403,7 +465,7 @@ function Clients() {
         </h2>
       </FadeIn>
       <FadeInStagger className="mt-10" faster>
-        <Border as={FadeIn} />
+        <Border as={FadeIn} className="w-60" />
         <ul
           role="list"
           className="grid grid-cols-1 gap-x-8 gap-y-12 lg:grid-cols-4"
@@ -449,7 +511,7 @@ function Saas() {
         </h2>
       </FadeIn>
       <FadeInStagger className="mt-10" faster>
-        <Border as={FadeIn} />
+        <Border as={FadeIn} className="w-60" />
         <ul
           role="list"
           className="grid grid-cols-1 gap-x-8 gap-y-12 lg:grid-cols-4"
@@ -484,7 +546,7 @@ function Saas() {
 export const metadata: Metadata = {
   title: 'My Experience - Benjamin Guiganton',
   description:
-    'We believe in efficiency and maximizing our resources to provide the best value to our clients.',
+    'Discover my journey from naval project management to web development, showcasing a diverse portfolio of projects, including SaaS development, freelance web solutions, and continuous learning in tech and AI.',
 }
 
 export default function Process() {
@@ -492,17 +554,8 @@ export default function Process() {
     <>
       <PageIntro eyebrow="My experiences" title="What I have done so far">
         <p>
-          After spending 10 years in the shipbuilding industry in various roles
-          like Assembler, Team Leader, Site Manager, Project Manager and
-          Business Manager. I recently embarked on a career change in the IT
-          industry. <br />
-          <br />
-          I have completed a 6 month bootcamp in web development, obtain my
-          diplom and I am currently working as a Freelance Developer. I am
-          looking for a new challenge and am open to new opportunities.
-          <br />
-          <br />I like to learn and to level up. I am creative , motivated and
-          hard worker.
+          From naval project management to web development, discover my journey
+          through my experiences and the skills I have acquired along the way.
         </p>
       </PageIntro>
 
@@ -513,6 +566,7 @@ export default function Process() {
         <Barillec01 />
         <Oclock01 />
         <Freelance01 />
+        <Freelance02 />
       </div>
 
       <Companies />
