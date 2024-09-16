@@ -259,7 +259,7 @@ function Barillec01() {
 function Oclock01() {
   return (
     <Section
-      title="Web Developer"
+      title="Web Developer Bootcamp"
       image={{ src: Oclock }}
       company="O'Clock"
       date="January 2023 - July 2023"
@@ -306,32 +306,39 @@ function Oclock01() {
 function Freelance01() {
   return (
     <Section
-      title="Building a Saas"
+      title="Building SaaS Products"
       image={{ src: AyuBen }}
-      company="Ayu & Ben"
+      company="Freelance Projects"
       date="January 2024 - Now"
     >
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          Ayu & Ben is an e-learning platform that offers the possibility of{' '}
+          As a freelance developer, I embarked on creating several{' '}
           <strong className="font-semibold text-neutral-950">
-            learning Japanese online
+            SaaS (Software as a Service) products
           </strong>
-          . With online courses by level, the website includes introductory
-          videos, dialogues, vocabulary, grammar lessons and exercises to help
-          learners progress in the Japanese language. In addition to the course
-          modules, a blog is available to enrich culture and knowledge about
-          Japan.
+          . This experience allowed me to develop a wide range of skills, from
+          technical design to business strategy.
         </p>
         <p>
-          Each user has a{' '}
+          Each SaaS project requires a{' '}
           <strong className="font-semibold text-neutral-950">
-            personalized dashboard
-          </strong>{' '}
-          to{' '}
-          <strong className="font-semibold text-neutral-950">
-            track their progress and scores.
+            holistic approach
           </strong>
+          , combining product development, market analysis, and project
+          management. I learned to{' '}
+          <strong className="font-semibold text-neutral-950">
+            work autonomously
+          </strong>
+          , managing all aspects of the product lifecycle.
+        </p>
+        <p>
+          From architectural design to implementing growth strategies, each step
+          strengthened my ability to{' '}
+          <strong className="font-semibold text-neutral-950">
+            create innovative and scalable solutions
+          </strong>
+          .
         </p>
       </div>
 
@@ -339,12 +346,16 @@ function Freelance01() {
         Skills
       </h3>
       <TagList className="mt-4">
-        <TagListItem>Building a Saas</TagListItem>
-        <TagListItem>Market research</TagListItem>
-        <TagListItem>Business Plan</TagListItem>
+        <TagListItem>SaaS Development</TagListItem>
+        <TagListItem>Market Research</TagListItem>
+        <TagListItem>Strategic Planning</TagListItem>
         <TagListItem>Autonomy</TagListItem>
-        <TagListItem>Marketing</TagListItem>
-        <TagListItem>Architecture</TagListItem>
+        <TagListItem>Digital Marketing</TagListItem>
+        <TagListItem>Software Architecture</TagListItem>
+        <TagListItem>UX/UI Design</TagListItem>
+        <TagListItem>Project Management</TagListItem>
+        <TagListItem>Data Analysis</TagListItem>
+        <TagListItem>SEO Optimization</TagListItem>
       </TagList>
     </Section>
   )
@@ -409,67 +420,6 @@ function Freelance02() {
   )
 }
 
-function Freelance03() {
-  return (
-    <Section
-      title="Building a Saas"
-      image={{ src: coding }}
-      company="Loop"
-      date="January 2024 - Now"
-    >
-      <div className="space-y-6 text-base text-neutral-600">
-        <p>
-          ベンジャミン Coding is a small school that{' '}
-          <strong className="font-semibold text-neutral-950">
-            teach programming
-          </strong>{' '}
-          to the young generation . Students embrace learning as they{' '}
-          <strong className="font-semibold text-neutral-950">
-            play and write code
-          </strong>{' '}
-          from the very start of their adventure, promoting active learning and
-          a growth mindset.
-        </p>
-        <p>
-          They learn Python, JavaScript or C++ while having fun with educational
-          programs like codecombat or minecraft education. Children develop a
-          logical mind to{' '}
-          <strong className="font-semibold text-neutral-950">
-            solve problems
-          </strong>
-          . We also learn English through programming languages and through the
-          actions that their character must carry out.
-        </p>
-        <p>
-          At the start of each course, they{' '}
-          <strong className="font-semibold text-neutral-950">
-            practice typing on the keyboard
-          </strong>{' '}
-          with English words so that they feel as comfortable as possible with
-          writing on the keyboard and become familiar with English words. We
-          also{' '}
-          <strong className="font-semibold text-neutral-950">
-            make small robots that we then program
-          </strong>{' '}
-          using blocks to make them do the desired actions.
-        </p>
-      </div>
-
-      <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
-        Skills
-      </h3>
-      <TagList className="mt-4">
-        <TagListItem>Building a Saas</TagListItem>
-        <TagListItem>Market research</TagListItem>
-        <TagListItem>Autonomy</TagListItem>
-        <TagListItem>Marketing</TagListItem>
-        <TagListItem>Architecture</TagListItem>
-        <TagListItem>Adaptability to Japanese Market</TagListItem>
-      </TagList>
-    </Section>
-  )
-}
-
 export const metadata: Metadata = {
   title: 'My Experience - Benjamin Guiganton',
   description:
@@ -494,7 +444,6 @@ export default function Process() {
         <Oclock01 />
         <Freelance01 />
         <Freelance02 />
-        <Freelance03 />
       </div>
     </>
   )
