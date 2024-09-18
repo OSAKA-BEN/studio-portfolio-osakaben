@@ -28,6 +28,7 @@ import ayuandbenImg from '@/images/work/ayuandben.png'
 import bonheurenbImg from '@/images/work/bonheurenb.jpg'
 import chezgImg from '@/images/work/chezg.jpg'
 import loopImg from '@/images/work/loop.png'
+import metablizzImg from '@/images/work/metablizz.png'
 import oworldImg from '@/images/work/oworld.jpg'
 
 const projectsData = [
@@ -55,6 +56,21 @@ const projectsData = [
     technology: [
       { name: 'React', src: reactImg },
       { name: 'Css', src: cssImg },
+    ],
+  },
+  {
+    title: 'Metablizz',
+    href: 'https://metablizz.vercel.app/',
+    summary: [
+      'A website aimed to present Blizzard worlds with the history of the lore and each character in immersion and to train me on animation effects and UI design.',
+    ],
+    image: { src: metablizzImg },
+    date: '2023',
+    technology: [
+      { name: 'React', src: reactImg },
+      { name: 'Vite', src: viteImg },
+      { name: 'TailwindCSS', src: tailwindcssImg },
+      { name: 'Framer', src: framermotionImg },
     ],
   },
   {

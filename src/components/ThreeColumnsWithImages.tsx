@@ -1,10 +1,5 @@
 'use client'
 
-import ayuandbenImg from '@/images/work/ayuandben.png'
-import bonheurenbImg from '@/images/work/bonheurenb.jpg'
-import chezgImg from '@/images/work/chezg.jpg'
-import loopImg from '@/images/work/loop.png'
-import oworldImg from '@/images/work/oworld.jpg'
 import { cn } from '@/lib/cn'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
@@ -12,6 +7,13 @@ import Link from 'next/link'
 import React from 'react'
 import { Container } from './Container'
 import { FadeIn } from './FadeIn'
+
+import ayuandbenImg from '@/images/work/ayuandben.png'
+import bonheurenbImg from '@/images/work/bonheurenb.jpg'
+import chezgImg from '@/images/work/chezg.jpg'
+import loopImg from '@/images/work/loop.png'
+import metablizzImg from '@/images/work/metablizz.png'
+import oworldImg from '@/images/work/oworld.jpg'
 
 export function ThreeColumnsWithImages() {
   return (
@@ -65,6 +67,16 @@ const items = [
     href: '/work#Les Bonheurs en B',
     header: (
       <Image src={bonheurenbImg} alt="Bento grid 2" width={500} height={500} />
+    ),
+    className: 'md:col-span-1',
+  },
+  {
+    title: 'Metablizz',
+    description:
+      'A website aimed to present Blizzard worlds with the history of the lore and each character in immersion and to train me on animation effects and UI design.',
+    href: '/work#Metablizz',
+    header: (
+      <Image src={metablizzImg} alt="Bento grid 2" width={500} height={500} />
     ),
     className: 'md:col-span-1',
   },
