@@ -4,6 +4,8 @@ import { Border } from '@/components/Border'
 import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { GrayscaleTransitionImage } from '@/components/GrayscaleTransitionImage'
+import dockerImg from '@/images/stack/docker.png'
+import drizzleImg from '@/images/stack/drizzle.svg'
 import figmaImg from '@/images/stack/figma.png'
 import gitImg from '@/images/stack/git.png'
 import hostingerImg from '@/images/stack/hostinger.png'
@@ -34,12 +36,17 @@ const tech = [
         image: { src: javascriptImg },
       },
       {
-        name: '',
+        name: 'TypeScript',
+        role: 'JavaScript Superset',
+        image: { src: typescriptImg },
+      },
+      {
+        name: 'React',
         role: 'JavaScript Library',
         image: { src: reactImg },
       },
       {
-        name: '',
+        name: 'Nextjs',
         role: 'JavaScript framework for server-side rendering',
         image: { src: nextjsImg },
       },
@@ -47,11 +54,6 @@ const tech = [
         name: 'Tailwind CSS',
         role: 'CSS Framework',
         image: { src: tailwindImg },
-      },
-      {
-        name: 'TypeScript',
-        role: 'JavaScript Superset',
-        image: { src: typescriptImg },
       },
       {
         name: 'Redux',
@@ -69,7 +71,7 @@ const tech = [
         image: { src: nodejsImg },
       },
       {
-        name: '',
+        name: 'PostgreSQL',
         role: 'Database management system',
         image: { src: postgresqlImg },
       },
@@ -84,12 +86,7 @@ const tech = [
         image: { src: redisImg },
       },
       {
-        name: '',
-        role: 'Headless CMS',
-        image: { src: strapiImg },
-      },
-      {
-        name: '',
+        name: 'MongoDB',
         role: 'NoSQL Database Management System',
         image: { src: mongodbImg },
       },
@@ -98,13 +95,23 @@ const tech = [
         role: 'Open-source Firebase alternative',
         image: { src: supabaseImg },
       },
+      {
+        name: 'Drizzle',
+        role: 'TypeScript-first SQL client',
+        image: { src: drizzleImg },
+      },
+      {
+        name: 'Strapi',
+        role: 'Headless CMS',
+        image: { src: strapiImg },
+      },
     ],
   },
   {
     title: 'Deployment & Hosting',
     techology: [
       {
-        name: '',
+        name: 'Vercel',
         role: 'Deployment platform',
         image: { src: vercelImg },
       },
@@ -122,6 +129,11 @@ const tech = [
         name: 'Git',
         role: 'Version control system',
         image: { src: gitImg },
+      },
+      {
+        name: 'Docker',
+        role: 'Containerization platform',
+        image: { src: dockerImg },
       },
       {
         name: 'Figma',
