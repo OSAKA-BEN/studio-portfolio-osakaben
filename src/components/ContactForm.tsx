@@ -2,7 +2,6 @@
 'use client'
 
 import { zodResolver } from '@hookform/resolvers/zod'
-import emailjs from 'emailjs-com'
 import { useId, useState } from 'react'
 import { SubmitHandler, UseFormRegister, useForm } from 'react-hook-form'
 import { Toaster, toast } from 'sonner'
@@ -78,22 +77,28 @@ export default function ContactForm() {
 
   const onSubmit: SubmitHandler<FormData> = async (formData: FormData) => {
     setIsLoading(true)
-    const templateParams = {
-      from_name: formData.name,
-      from_email: formData.email,
-      to_name: 'Benjamin GUIGANTON',
-      message: formData.message,
-    }
 
     try {
-      const response = await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-        templateParams,
-        process.env.NEXT_PUBLIC_EMAILJS_USER_ID!,
-      )
+      const response = await fetch('/api/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          from_name: formData.name,
+          from_email: formData.email,
+          to_name: 'Benjamin GUIGANTON',
+          message: formData.message,
+        }),
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to send message')
+      }
+
+      const data = await response.json()
       toast.success('Your message has been sent!')
-      console.log('SUCCESS!', response.status, response.text)
+      console.log('SUCCESS!', data)
       reset()
     } catch (error) {
       toast.error('Failed to send message: ' + error)
