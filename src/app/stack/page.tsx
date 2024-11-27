@@ -5,7 +5,6 @@ import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { GrayscaleTransitionImage } from '@/components/GrayscaleTransitionImage'
 import dockerImg from '@/images/stack/docker.png'
-import drizzleImg from '@/images/stack/drizzle.svg'
 import figmaImg from '@/images/stack/figma.png'
 import gitImg from '@/images/stack/git.png'
 import hostingerImg from '@/images/stack/hostinger.png'
@@ -14,17 +13,16 @@ import mongodbImg from '@/images/stack/mongodb.png'
 import nextjsImg from '@/images/stack/nextjs.png'
 import nodejsImg from '@/images/stack/nodejs.png'
 import postgresqlImg from '@/images/stack/postgresql.png'
+import prismaImg from '@/images/stack/prisma.png'
 import reactImg from '@/images/stack/reactjs.png'
 import redisImg from '@/images/stack/redis.png'
 import reduxImg from '@/images/stack/redux.png'
 import riveImg from '@/images/stack/rive.png'
 import sequelizeImg from '@/images/stack/sequelize.png'
-import strapiImg from '@/images/stack/strapi.png'
 import supabaseImg from '@/images/stack/supabase.png'
 import tailwindImg from '@/images/stack/tailwind.png'
 import typescriptImg from '@/images/stack/typescript.png'
 import vercelImg from '@/images/stack/vercel.png'
-import wordpressImg from '@/images/stack/wordpress.png'
 
 const tech = [
   {
@@ -96,14 +94,9 @@ const tech = [
         image: { src: supabaseImg },
       },
       {
-        name: 'Drizzle',
-        role: 'TypeScript-first SQL client',
-        image: { src: drizzleImg },
-      },
-      {
-        name: 'Strapi',
-        role: 'Headless CMS',
-        image: { src: strapiImg },
+        name: 'Prisma',
+        role: 'TypeScript-first ORM',
+        image: { src: prismaImg },
       },
     ],
   },
@@ -144,11 +137,6 @@ const tech = [
         name: 'Rive',
         role: 'Design tool for interactive animations',
         image: { src: riveImg },
-      },
-      {
-        name: 'Wordpress',
-        role: 'Content Management System',
-        image: { src: wordpressImg },
       },
     ],
   },

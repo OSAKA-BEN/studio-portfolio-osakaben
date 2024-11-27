@@ -4,32 +4,41 @@ import { Border } from '@/components/Border'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
-import { GrayscaleTransitionImage } from '@/components/GrayscaleTransitionImage'
 import { PageIntro } from '@/components/PageIntro'
 import Link from 'next/link'
 
 import chartjsImg from '@/images/stack/chartjs.png'
+import cloudinaryImg from '@/images/stack/cloudinary.png'
 import cssImg from '@/images/stack/css.png'
 import excelImg from '@/images/stack/excel.png'
 import figmaImg from '@/images/stack/figma.png'
 import framermotionImg from '@/images/stack/framermotion.svg'
+import htmlImg from '@/images/stack/html.png'
+import javascriptImg from '@/images/stack/javascript.png'
+import mongodbImg from '@/images/stack/mongodb.png'
 import nextjsImg from '@/images/stack/nextjs.png'
+import nodeImg from '@/images/stack/nodejs.png'
 import postgresqlImg from '@/images/stack/postgresql.png'
 import reactImg from '@/images/stack/reactjs.png'
 import redisImg from '@/images/stack/redis.png'
 import reduxImg from '@/images/stack/redux.png'
+import stripeImg from '@/images/stack/stripe.png'
 import supabaseImg from '@/images/stack/supabase.png'
 import tailwindcssImg from '@/images/stack/tailwind.png'
 import typescriptImg from '@/images/stack/typescript.png'
 import vbaImg from '@/images/stack/vba.png'
 import viteImg from '@/images/stack/vite.png'
+import airetouchImg from '@/images/work/airetouchImg.jpg'
 import appchantierImg from '@/images/work/appchantier.jpg'
 import ayuandbenImg from '@/images/work/ayuandben.png'
-import bonheurenbImg from '@/images/work/bonheurenb.jpg'
+import bonheursenbImg from '@/images/work/bonheursenb.jpg'
 import chezgImg from '@/images/work/chezg.jpg'
-import loopImg from '@/images/work/loop.png'
+import mecchaImg from '@/images/work/meccha2.jpg'
 import metablizzImg from '@/images/work/metablizz.png'
+import metroImg from '@/images/work/metro.png'
 import oworldImg from '@/images/work/oworld.jpg'
+import teslaImg from '@/images/work/tesla.jpg'
+import Image from 'next/image'
 
 const projectsData = [
   {
@@ -95,16 +104,17 @@ const projectsData = [
   },
   {
     title: 'Les Bonheurs en B',
-    href: 'https://bonheur-en-a2ryai9y1-osaka-ben.vercel.app/',
+    href: 'https://les-bonheurs-en-b.vercel.app/',
     summary: [
       "Showcase site created to present a client's lodgings and present the activities of the region.",
     ],
-    image: { src: bonheurenbImg },
+    image: { src: bonheursenbImg },
     date: '2023',
     technology: [
       { name: 'Figma', src: figmaImg },
       { name: 'React', src: reactImg },
       { name: 'NextJs', src: nextjsImg },
+      { name: 'Framer', src: framermotionImg },
       { name: 'TailwindCSS', src: tailwindcssImg },
     ],
   },
@@ -128,22 +138,72 @@ const projectsData = [
     ],
   },
   {
-    title: 'Loop',
-    href: 'https://loop-learn-english.jp/',
+    title: 'Metro',
+    href: 'https://www.metro-learn-english.app/',
     summary: [
-      'A web application that allows to learn english vocabulary through active method exercises. Words are displayed in Japanese and the user has to choose type the word in english. For each word, the user can hear the right pronunciation with native audio. ',
+      'A web application for Japanese students to learn english vocabulary through active method exercises. Words are displayed in English and the user has to choose type the word for each repetition. For each word, the user can hear the right pronunciation with native audio.',
     ],
-    image: { src: loopImg },
+    image: { src: metroImg },
     date: '2024',
     technology: [
       { name: 'Figma', src: figmaImg },
       { name: 'React', src: reactImg },
       { name: 'NextJs', src: nextjsImg },
       { name: 'TailwindCSS', src: tailwindcssImg },
-      { name: 'Framer', src: framermotionImg },
       { name: 'TypeScript', src: typescriptImg },
       { name: 'Supabase', src: supabaseImg },
       { name: 'PostgreSQL', src: postgresqlImg },
+    ],
+  },
+  {
+    title: 'Tesla Configurator',
+    href: 'https://tesla-configurator-beryl.vercel.app/',
+    summary: [
+      'A configurator for Tesla cars to choose the options and see the price.',
+    ],
+    image: { src: teslaImg },
+    date: '2024',
+    technology: [
+      { name: 'HTML', src: htmlImg },
+      { name: 'CSS', src: cssImg },
+      { name: 'JavaScript', src: javascriptImg },
+    ],
+  },
+  {
+    title: 'AI Retouch',
+    href: 'https://tesla-configurator-beryl.vercel.app/',
+    summary: [
+      'A web application to retouch images with AI. Remove background, restore image, remove objects, change the format, recolor, generative fill.',
+    ],
+    image: { src: airetouchImg },
+    date: '2024',
+    technology: [
+      { name: 'React', src: reactImg },
+      { name: 'NextJs', src: nextjsImg },
+      { name: 'TailwindCSS', src: tailwindcssImg },
+      { name: 'TypeScript', src: typescriptImg },
+      { name: 'Cloudinary', src: cloudinaryImg },
+      { name: 'MongoDB', src: mongodbImg },
+      { name: 'Stripe', src: stripeImg },
+    ],
+  },
+  {
+    title: 'Meccha',
+    href: 'https://meccha-frontend.vercel.app/',
+    summary: [
+      'An e-commerce website for selling Japanese products with complete backoffice. It allows to manage the products, the orders, the customers and the inventory. Payment is made with Stripe.',
+    ],
+    image: { src: mecchaImg },
+    date: '2024',
+    technology: [
+      { name: 'React', src: reactImg },
+      { name: 'NextJs', src: nextjsImg },
+      { name: 'TailwindCSS', src: tailwindcssImg },
+      { name: 'TypeScript', src: typescriptImg },
+      { name: 'Express', src: nodeImg },
+      { name: 'MongoDB', src: mongodbImg },
+      { name: 'Cloudinary', src: cloudinaryImg },
+      { name: 'Stripe', src: stripeImg },
     ],
   },
 ]
@@ -163,9 +223,11 @@ function Projects() {
               <Border className="grid grid-cols-3 gap-x-8 gap-y-8 pt-16">
                 <div className="col-span-full sm:flex sm:items-center sm:justify-between sm:gap-x-8 lg:col-span-1 lg:block">
                   <div className="sm:flex sm:items-center sm:gap-x-6 lg:block">
-                    <GrayscaleTransitionImage
-                      {...project.image}
-                      sizes="(min-width: 768px) 42rem, 100vw"
+                    <Image
+                      src={project.image.src}
+                      alt={project.title}
+                      width={500}
+                      height={500}
                       className="aspect-[16/10] w-full rounded-xl object-cover"
                     />
                   </div>
@@ -209,10 +271,12 @@ function Projects() {
                         <FadeIn>
                           <div className="group relative flex h-24 w-24 flex-col overflow-hidden rounded-xl bg-neutral-100 p-4">
                             <div className="flex h-2/3 items-start justify-center">
-                              <GrayscaleTransitionImage
-                                {...technology.src}
-                                sizes="(min-width: 768px) 42rem, 100vw"
-                                className="h-8 w-8 rounded-xl object-contain"
+                              <Image
+                                src={technology.src}
+                                alt={technology.name}
+                                width={200}
+                                height={200}
+                                className="h-10 w-10 rounded-xl object-contain"
                               />
                             </div>
                             <div className="flex h-1/3 items-end justify-center">

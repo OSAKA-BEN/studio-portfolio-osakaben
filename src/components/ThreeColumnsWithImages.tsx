@@ -8,12 +8,16 @@ import React from 'react'
 import { Container } from './Container'
 import { FadeIn } from './FadeIn'
 
+import airetouchImg from '@/images/work/airetouchImg.jpg'
 import ayuandbenImg from '@/images/work/ayuandben.png'
-import bonheurenbImg from '@/images/work/bonheurenb.jpg'
+import bonheursenbImg from '@/images/work/bonheursenb.jpg'
 import chezgImg from '@/images/work/chezg.jpg'
-import loopImg from '@/images/work/loop.png'
+import mecchaImg from '@/images/work/meccha.jpg'
+import meccha2Img from '@/images/work/meccha2.jpg'
 import metablizzImg from '@/images/work/metablizz.png'
+import metroImg from '@/images/work/metro.png'
 import oworldImg from '@/images/work/oworld.jpg'
+import teslaImg from '@/images/work/tesla.jpg'
 
 export function ThreeColumnsWithImages() {
   return (
@@ -52,7 +56,7 @@ const items = [
     header: (
       <Image
         src={chezgImg}
-        alt="Bento grid 1"
+        alt="Chez G"
         width={500}
         height={500}
         className="ml-6 w-full rounded-lg object-cover"
@@ -61,12 +65,12 @@ const items = [
     className: 'md:col-span-1',
   },
   {
-    title: 'Bonheur en B',
+    title: 'Les Bonheurs en B',
     description:
       "Showcase site created to present a client's lodgings and present the activities of the region.",
     href: '/work#Les Bonheurs en B',
     header: (
-      <Image src={bonheurenbImg} alt="Bento grid 2" width={500} height={500} />
+      <Image src={bonheursenbImg} alt="Bonheur en B" width={500} height={500} />
     ),
     className: 'md:col-span-1',
   },
@@ -76,7 +80,7 @@ const items = [
       'A website aimed to present Blizzard worlds with the history of the lore and each character in immersion and to train me on animation effects and UI design.',
     href: '/work#Metablizz',
     header: (
-      <Image src={metablizzImg} alt="Bento grid 2" width={500} height={500} />
+      <Image src={metablizzImg} alt="Metablizz" width={500} height={500} />
     ),
     className: 'md:col-span-1',
   },
@@ -88,7 +92,7 @@ const items = [
     header: (
       <Image
         src={oworldImg}
-        alt="Bento grid 3"
+        alt="OWorld"
         width={500}
         height={500}
         className="-ml-6 -mt-4 rounded-lg object-cover md:-mt-0"
@@ -105,14 +109,14 @@ const items = [
       <div className="flex">
         <Image
           src={ayuandbenImg}
-          alt="Bento grid 4"
+          alt="Ayu and Ben"
           width={500}
           height={500}
           className="ml-6 rounded-lg object-cover"
         />
         <Image
           src={ayuandbenImg}
-          alt="Bento grid 4"
+          alt="Ayu and Ben"
           width={500}
           height={500}
           className="ml-6 mt-8 rounded-lg object-cover"
@@ -121,22 +125,86 @@ const items = [
     ),
     className: 'md:col-span-2',
   },
-
   {
-    title: 'Loop',
+    title: 'Metro',
     description:
-      'A web application that allows to learn english vocabulary through active method exercises. Words are displayed in Japanese and the user has to choose type the word in english. For each word, the user can hear the right pronunciation with native audio.',
-    href: '/work#Loop',
+      'A web application for Japanese students to learn english vocabulary through active method exercises. Words are displayed in English and the user has to choose type the word for each repetition. For each word, the user can hear the right pronunciation with native audio.',
+    href: '/work#Metro',
+    header: (
+      <div className="flex">
+        <Image
+          src={metroImg}
+          alt="Metro"
+          width={500}
+          height={500}
+          className="ml-6 rounded-lg object-contain"
+        />
+        <Image
+          src={metroImg}
+          alt="Metro"
+          width={500}
+          height={500}
+          className="ml-6 mt-8 rounded-lg object-cover"
+        />
+      </div>
+    ),
+    className: 'md:col-span-2',
+  },
+  {
+    title: 'Tesla Configurator',
+    description:
+      'A configurator for Tesla cars to choose the options and see the price.',
+    href: '/work#Tesla Configurator',
     header: (
       <Image
-        src={loopImg}
-        alt="Bento grid 5"
+        src={teslaImg}
+        alt="Tesla Configurator"
         width={500}
         height={500}
-        className="mx-auto -mb-4 w-[calc(100%-3rem)] rounded-lg"
+        className="-ml-6 -mt-4 rounded-lg object-cover md:-mt-0"
       />
     ),
     className: 'md:col-span-1',
+  },
+  {
+    title: 'AI Retouch',
+    description: 'A web application to retouch images with AI.',
+    href: '/work#AI Retouch',
+    header: (
+      <Image
+        src={airetouchImg}
+        alt="AI Retouch"
+        width={500}
+        height={500}
+        className="-ml-6 -mt-4 rounded-lg object-cover md:-mt-0"
+      />
+    ),
+    className: 'md:col-span-1',
+  },
+  {
+    title: 'Meccha',
+    description:
+      'An e-commerce website for selling Japanese products with complete backoffice. It allows to manage the products, the orders, the customers and the inventory. Payment is made with Stripe.',
+    href: '/work#Meccha',
+    header: (
+      <div className="flex">
+        <Image
+          src={mecchaImg}
+          alt="Meccha"
+          width={500}
+          height={500}
+          className="ml-6 rounded-lg object-contain"
+        />
+        <Image
+          src={meccha2Img}
+          alt="Meccha"
+          width={500}
+          height={500}
+          className="ml-6 mt-8 rounded-lg object-cover"
+        />
+      </div>
+    ),
+    className: 'md:col-span-2',
   },
 ]
 

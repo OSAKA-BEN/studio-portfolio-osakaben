@@ -13,6 +13,12 @@ import frenchflag from '@/images/flags/france.png'
 import japaneseflag from '@/images/flags/japon.png'
 import englishflag from '@/images/flags/unitedkingdom.png'
 
+export const metadata: Metadata = {
+  title: 'Benjamin Guiganton - Portfolio',
+  description:
+    'Welcome to the portfolio of Benjamin Guiganton, a dynamic web developer with a rich background in project management and a passion for technology and innovation. Explore my journey from naval construction to creating cutting-edge web solutions and learning platforms.',
+}
+
 const languages = [
   ['French', frenchflag],
   ['English', englishflag],
@@ -101,12 +107,6 @@ function Values() {
       </Container>
     </div>
   )
-}
-
-export const metadata: Metadata = {
-  title: 'Benjamin Guiganton - Portfolio',
-  description:
-    'Welcome to the portfolio of Benjamin Guiganton, a dynamic web developer with a rich background in project management and a passion for technology and innovation. Explore my journey from naval construction to creating cutting-edge web solutions and learning platforms.',
 }
 
 export default async function Home() {
