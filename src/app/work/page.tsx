@@ -31,7 +31,7 @@ import viteImg from '@/images/stack/vite.png'
 import airetouchImg from '@/images/work/airetouchImg.jpg'
 import appchantierImg from '@/images/work/appchantier.jpg'
 import ayuandbenImg from '@/images/work/ayuandben.png'
-import bonheursenbImg from '@/images/work/bonheursenb.jpg'
+import bonheursenbImg from '@/images/work/bonheursenb.png'
 import chezgImg from '@/images/work/chezg.jpg'
 import mecchaImg from '@/images/work/meccha2.jpg'
 import metablizzImg from '@/images/work/metablizz.png'
@@ -104,7 +104,7 @@ const projectsData = [
   },
   {
     title: 'Les Bonheurs en B',
-    href: 'https://les-bonheurs-en-b.vercel.app/',
+    href: 'https://bonheursenb.com/',
     summary: [
       "Showcase site created to present a client's lodgings and present the activities of the region.",
     ],
@@ -171,7 +171,7 @@ const projectsData = [
   },
   {
     title: 'AI Retouch',
-    href: 'https://tesla-configurator-beryl.vercel.app/',
+    href: 'https://ai-images-retouch.vercel.app/',
     summary: [
       'A web application to retouch images with AI. Remove background, restore image, remove objects, change the format, recolor, generative fill.',
     ],
