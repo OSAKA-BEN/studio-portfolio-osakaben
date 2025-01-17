@@ -10,12 +10,14 @@ import { FadeIn } from './FadeIn'
 
 import airetouchImg from '@/images/work/airetouchImg.jpg'
 import ayuandbenImg from '@/images/work/ayuandben.png'
+import ayuandben2Img from '@/images/work/ayuandben2.png'
 import bonheursenbImg from '@/images/work/bonheursenb.jpg'
 import chezgImg from '@/images/work/chezg.jpg'
 import mecchaImg from '@/images/work/meccha.jpg'
 import meccha2Img from '@/images/work/meccha2.jpg'
 import metablizzImg from '@/images/work/metablizz.png'
-import metroImg from '@/images/work/metro.png'
+import metro1Img from '@/images/work/metro1.png'
+import metro2Img from '@/images/work/metro2.png'
 import oworldImg from '@/images/work/oworld.jpg'
 import teslaImg from '@/images/work/tesla.jpg'
 
@@ -115,7 +117,7 @@ const items = [
           className="ml-6 rounded-lg object-cover"
         />
         <Image
-          src={ayuandbenImg}
+          src={ayuandben2Img}
           alt="Ayu and Ben"
           width={500}
           height={500}
@@ -133,14 +135,14 @@ const items = [
     header: (
       <div className="flex">
         <Image
-          src={metroImg}
+          src={metro1Img}
           alt="Metro"
           width={500}
           height={500}
           className="ml-6 rounded-lg object-contain"
         />
         <Image
-          src={metroImg}
+          src={metro2Img}
           alt="Metro"
           width={500}
           height={500}
