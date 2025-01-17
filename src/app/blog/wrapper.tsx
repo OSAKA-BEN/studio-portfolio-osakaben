@@ -38,7 +38,7 @@ export default async function BlogArticleWrapper({
         </FadeIn>
 
         <FadeIn>
-          <MDXComponents.wrapper className="mt-24 sm:mt-32 lg:mt-40">
+          <MDXComponents.wrapper className="mt-8">
             {children}
           </MDXComponents.wrapper>
         </FadeIn>
