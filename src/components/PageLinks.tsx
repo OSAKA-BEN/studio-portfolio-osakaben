@@ -1,5 +1,5 @@
-import Link from 'next/link'
 import clsx from 'clsx'
+import Link from 'next/link'
 
 import { Border } from '@/components/Border'
 import { Container } from '@/components/Container'
@@ -69,8 +69,7 @@ export function PageLinks({
   className?: string
 }) {
   return (
-    <div className={clsx('relative pt-24 sm:pt-32 lg:pt-40', className)}>
-
+    <div className={clsx('relative pt-24', className)}>
       <SectionIntro title={title} smaller>
         {intro && <p>{intro}</p>}
       </SectionIntro>
