@@ -24,7 +24,6 @@ const navigation = [
       { title: 'My Stack', href: '/stack' },
       { title: 'My Experience', href: '/experiences' },
       { title: 'My Dev Blog', href: '/blog' },
-      { title: 'Contact me', href: '/contact' },
     ],
   },
   {
